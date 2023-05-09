@@ -107,6 +107,11 @@ void loop() {
       digitalWrite(getValue(payloadStr, '-', 0).toInt(), HIGH);
       delay(getValue(payloadStr, '-', 1).toInt());
       digitalWrite(getValue(payloadStr, '-', 0).toInt(), LOW);
+      delay(5000);
+      pinMode(getValue(payloadStr, '-', 0).toInt(), OUTPUT);
+      digitalWrite(getValue(payloadStr, '-', 0).toInt(), HIGH);
+      delay(getValue(payloadStr, '-', 1).toInt());
+      digitalWrite(getValue(payloadStr, '-', 0).toInt(), LOW);
     }
   }
   Serial.println("Paid");
